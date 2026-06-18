@@ -1,0 +1,12 @@
+# Secrets et configuration
+.env
+*.env
+config.local.*
+# Donnees client reelles (NE PAS publier)
+*.xlsx
+*.xls
+/data-reelles/
+donnees_clients*.*
+# Fichiers techniques inutiles
+node_modules/
+*.log
