@@ -1,0 +1,59 @@
+{
+  "_comment": [
+    "TABLE DE CORRESPONDANCE entre le modele de ClienTara (a gauche) et les sources.",
+    "Section 'excel'  : utilisee en MODE DEMO (extraction du fichier Excel source).",
+    "Sections 4D      : utilisees en MODE PRODUCTION (extraction du serveur 4D).",
+    "En production, remplace les valeurs 4D par les vrais noms (sensibles a la casse)."
+  ],
+
+  "excel": {
+    "sheets": { "clients": "BD clients", "journal": "Journal" },
+    "clients": { "refnum": "Refnum", "nom": "Nom_Client" },
+    "journal": {
+      "refnum": "Refnum",
+      "nom": "Nom_Client",
+      "technologie": "Technologie",
+      "id_produit": "Réf_produit",
+      "ancien_produit": "Ancien_produit",
+      "ancien_mensualite": "Ancien_Mensualité_TTC",
+      "date_contrat": "Date_Contrat",
+      "ref_nouv_produit": "Ref_nouv_produit",
+      "nouveau_produit": "Nouveau_produit",
+      "nouveau_mensualite": "Nouveau_Mensualité_TTC",
+      "date_nv_contrat": "Date_Nv_Contrat"
+    }
+  },
+
+  "dataClasses": {
+    "client": "Clients",
+    "produit": "Produits",
+    "contrat": "Contrats"
+  },
+
+  "client": {
+    "refnum": "Refnum",
+    "nom": "NomComplet",
+    "mail": "Email",
+    "telephone": "Telephone",
+    "adresse": "Adresse",
+    "_search": ["Refnum", "NomComplet"]
+  },
+
+  "produit": {
+    "_client_fk": "ClientRefnum",
+    "id_produit": "RefProduit",
+    "intitule": "Intitule",
+    "technologie": "Technologie",
+    "produit": "NomProduit"
+  },
+
+  "contrat": {
+    "_client_fk": "ClientRefnum",
+    "id_contrat": "NumContrat",
+    "type_contrat": "TypeContrat",
+    "date_debut": "DateDebut",
+    "date_fin": "DateFin",
+    "duree": "DureeMois",
+    "facturation": "Facturation"
+  }
+}

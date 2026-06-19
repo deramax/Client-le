@@ -1,0 +1,30 @@
+# Annuaire LDAP de démonstration pour ClienTara.
+# La racine dc=clientara,dc=local est créée automatiquement par l'image
+# osixia/openldap à partir de LDAP_DOMAIN. Ce fichier ajoute une unité
+# "people" et deux comptes de test (mot de passe : clientara).
+#
+# Pour l'utiliser : `docker compose --profile ldap up`, puis dans .env :
+#   LDAP_ENABLED=true
+# et se connecter avec l'identifiant jrakoto ou hrabe / clientara.
+
+dn: ou=people,dc=clientara,dc=local
+objectClass: organizationalUnit
+ou: people
+
+dn: uid=jrakoto,ou=people,dc=clientara,dc=local
+objectClass: inetOrgPerson
+uid: jrakoto
+cn: Jean Rakoto
+sn: Rakoto
+mail: jrakoto@clientara.local
+telephoneNumber: +261 34 00 000 01
+userPassword: clientara
+
+dn: uid=hrabe,ou=people,dc=clientara,dc=local
+objectClass: inetOrgPerson
+uid: hrabe
+cn: Hanta Rabe
+sn: Rabe
+mail: hrabe@clientara.local
+telephoneNumber: +261 34 00 000 02
+userPassword: clientara

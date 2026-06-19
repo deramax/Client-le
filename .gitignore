@@ -1,0 +1,31 @@
+# --- Python / Django (backend) ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+backend/db.sqlite3
+backend/staticfiles/
+*.log
+
+# --- Node / Vite (frontend) ---
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# --- Secrets & local config ---
+.env
+*.env
+!.env.example
+config.local.*
+
+# --- Données client réelles (NE PAS publier) ---
+*.xlsx
+*.xls
+/data-reelles/
+
+# --- OS / éditeur ---
+.DS_Store
+.idea/
+.vscode/
