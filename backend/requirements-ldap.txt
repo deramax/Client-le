@@ -1,0 +1,4 @@
+# LDAP integration — requires system libs (libldap2-dev libsasl2-dev) to build python-ldap.
+# Installed in the Docker image. For local dev without LDAP you can skip this file.
+# Enable at runtime with LDAP_ENABLED=true (see clientara/settings.py).
+django-auth-ldap>=4.8
